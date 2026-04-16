@@ -10,7 +10,7 @@ The elegant way to save ChatGPT & Gemini conversations to PDF, Word, and Markdow
 - **Deep Capture:** Automatically scrolls and captures massive conversations without missing a single detail.
 
 ## 🔗 Links
-- 🌐 [Official Website / Landing Page](https://nextgen-tools.github.io/AI-Export-Studio/)
+- 🌐 [Official Website / Landing Page](https://aiexportstudio.vercel.app/)
 - 🛒 [Chrome Web Store Listing](https://chromewebstore.google.com/detail/ai-export-studio-chatgpt-gemini/aodfihebjndlllpkfcdhgjcfmaiaiapb)
 
 ---
