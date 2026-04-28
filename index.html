@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,7 +37,7 @@
     </script>
     <style>
       @keyframes reveal-up {
-        0% { opacity: 0; transform: translateY(30px); }
+        0% { opacity: 0; transform: translateY(15px); }
         100% { opacity: 1; transform: translateY(0); }
       }
       @keyframes reveal-scale {
@@ -216,10 +216,7 @@
       <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-50 rounded-full blur-[100px] -z-10 animate-blob-2" style="animation-delay: 1s;"></div>
 
       <div class="max-w-5xl mx-auto text-center">
-        <div class="reveal-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold tracking-wider uppercase mb-8">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-          Founder's Edition Now Live
-        </div>
+
         
         <h1 class="reveal-up delay-100 text-4xl sm:text-5xl md:text-8xl font-black tracking-tight leading-tight md:leading-normal mb-6 md:mb-8 py-4">
           Export AI chats <br />
@@ -278,7 +275,7 @@
           <div class="absolute top-0 right-0 p-5">
             <div class="bg-slate-200 text-slate-600 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full border border-slate-300">FRUSTRATING</div>
           </div>
-          <h3 class="text-2xl font-black text-slate-400 mb-8 flex items-center gap-3 relative z-10 transition-colors">
+          <h3 class="text-2xl font-black text-slate-400 mb-8 flex items-center gap-3 relative z-10 transition-colors pr-28 sm:pr-0">
             <span class="bg-white p-2.5 rounded-xl shadow-sm border border-slate-200 grayscale"><i data-lucide="frown" class="w-6 h-6 text-slate-500" stroke-width="2.5"></i></span>
             The old way
           </h3>
@@ -296,7 +293,7 @@
           <div class="absolute top-0 right-0 p-5">
             <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-[11px] font-black uppercase tracking-widest px-5 py-2 rounded-full shadow-lg shadow-blue-500/20 animate-pulse">✨ EFFORTLESS</div>
           </div>
-          <h3 class="text-3xl font-black mb-8 flex items-center gap-3 text-slate-900 relative z-10">
+          <h3 class="text-3xl font-black mb-8 flex items-center gap-3 text-slate-900 relative z-10 pr-32 sm:pr-0">
             <span class="bg-blue-600 w-14 h-14 flex-shrink-0 rounded-2xl shadow-lg shadow-blue-500/20 flex items-center justify-center"><i data-lucide="rocket" class="w-7 h-7 text-white" stroke-width="2"></i></span>
             With Ai Export Studio
           </h3>
@@ -331,12 +328,12 @@
             <h3 class="text-xl font-bold mb-4">Total Privacy</h3>
             <p class="text-slate-400 leading-relaxed text-sm">Your chats never leave your machine. Everything is processed locally.</p>
           </div>
-          <div class="reveal-up delay-200 p-6 md:p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
+          <div class="hidden md:block reveal-up delay-200 p-6 md:p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
             <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-purple-500/20 text-purple-400"><i data-lucide="layers" class="w-7 h-7"></i></div>
             <h3 class="text-xl font-bold mb-4">Selective Focus</h3>
             <p class="text-slate-400 leading-relaxed text-sm">Cut out the noise. Select only the specific prompts and responses you need.</p>
           </div>
-          <div class="reveal-up delay-300 p-6 md:p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
+          <div class="hidden md:block reveal-up delay-300 p-6 md:p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
             <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-amber-500/20 text-amber-400"><i data-lucide="zap" class="w-7 h-7"></i></div>
             <h3 class="text-xl md:text-2xl font-black mb-4">Deep Capture</h3>
             <p class="text-slate-400 leading-relaxed text-sm md:text-base">Automatically scrolls and captures massive conversations without missing a detail.</p>
@@ -420,7 +417,7 @@
           </div>
 
           <!-- 3. Selective Export -->
-          <div class="bento-card group">
+          <div class="hidden md:flex bento-card group">
             <div class="p-6 md:p-8 pb-0 z-10">
               <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Selective Export</h3>
               <p class="text-slate-400 text-sm md:text-base">Pick exactly which messages to save.</p>
@@ -433,7 +430,7 @@
           </div>
 
           <!-- 4. Magic Auto-Prompt -->
-          <div class="md:col-span-2 bento-card group">
+          <div class="hidden md:flex md:col-span-2 bento-card group">
             <div class="p-6 md:p-8 pb-0 z-10">
               <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Magic Auto-Prompt</h3>
               <p class="text-slate-400 text-sm md:text-base">Save your favorite prompts and inject them instantly without typing.</p>
@@ -456,7 +453,7 @@
     <section id="pricing" class="pt-20 md:pt-40 pb-20 md:pb-40 px-4 md:px-6 bg-slate-50 overflow-hidden">
       <div class="max-w-7xl mx-auto">
         <div class="reveal-up text-center mb-12 md:mb-16">
-          <div class="inline-block bg-blue-600 text-white px-4 md:px-8 py-2 md:py-3 rounded-full text-[10px] sm:text-xs md:text-sm font-black uppercase tracking-widest mb-6 md:mb-10 shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)] max-w-full">
+          <div class="inline-block bg-blue-600 text-white px-4 md:px-8 py-2 md:py-3 rounded-full text-xs sm:text-sm md:text-sm font-black uppercase tracking-widest mb-6 md:mb-10 shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)] max-w-full">
             <span class="whitespace-normal sm:whitespace-nowrap">🍕 LIMITED TIME: LIFETIME ACCESS FOR < 2 PIZZAS</span>
           </div>
           <h2 class="text-4xl md:text-7xl font-black tracking-tight mb-8 md:mb-10 text-slate-900">
@@ -544,7 +541,7 @@
             <div class="mt-auto space-y-3 flex flex-col">
               <!-- All Access (Visible on both) -->
               <a id="link-life" href="https://rzp.io/rzp/aiexportstudio-lifetime" target="_blank" rel="noopener noreferrer" class="w-full py-4 md:py-5 rounded-2xl bg-slate-950 text-white font-bold text-base md:text-[17px] text-center hover:bg-slate-800 transition-all shadow-xl shadow-slate-300 flex flex-col items-center justify-center relative order-1">
-                <span class="md:hidden text-[10px] uppercase tracking-widest text-amber-400 font-black mb-1">Best Value</span>
+                <span class="md:hidden text-xs uppercase tracking-widest text-amber-400 font-black mb-1">Best Value</span>
                 <span class="flex items-center gap-2"><i data-lucide="monitor-smartphone" class="w-4 h-4 md:hidden"></i> Get All Access <span class="md:hidden">(₹299)</span></span>
               </a>
 
@@ -553,8 +550,8 @@
                 <a id="link-life-android" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-white text-emerald-700 font-bold text-base text-center hover:bg-emerald-50 transition-all border border-emerald-200 flex flex-col items-center justify-center leading-tight shadow-sm relative overflow-hidden">
                   <span class="flex items-center gap-2"><i data-lucide="smartphone" class="w-4 h-4"></i> Android Only</span>
                   <div class="flex items-center gap-2 mt-1">
-                    <span class="text-xl font-black text-emerald-600">₹199</span>
-                    <span class="text-xs text-slate-400 line-through">₹299</span>
+                    <span class="text-xl font-black text-emerald-600"><span class="price-sym">₹</span><span class="price-val-android">199</span></span>
+                    <span class="text-xs text-slate-400 line-through"><span class="price-sym">₹</span><span class="price-old-android">299</span></span>
                   </div>
                   <div class="text-[11px] font-bold text-emerald-800/70 mt-1.5 uppercase tracking-wide bg-emerald-100 px-2 py-0.5 rounded-full">
                     1 Android Device Only

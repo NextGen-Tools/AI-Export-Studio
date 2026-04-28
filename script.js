@@ -38,11 +38,13 @@ const prices = {
     inr: { 
         mon: { sym: '₹', val: '149', orig: '₹299', link: 'https://rzp.io/rzp/aiexportstudio-monthly' }, 
         life: { sym: '₹', val: '299', old: '499', orig: '₹999', link: 'https://rzp.io/rzp/aiexportstudio-lifetime' }, 
+        android: { sym: '₹', val: '199', old: '299' },
         agency: { sym: '₹', val: '1499', orig: '₹2999' } 
     },
     usd: { 
         mon: { sym: '$', val: '4.99', orig: '$9.99', link: 'https://www.paypal.com/ncp/payment/87C9X6ZQEZK34' }, 
-        life: { sym: '$', val: '9.99', old: '19.99', orig: '$49.99', link: 'https://www.paypal.com/ncp/payment/QBDYQZSFPNL28' }, 
+        life: { sym: '$', val: '12.99', old: '19.99', orig: '$49.99', link: 'https://www.paypal.com/ncp/payment/QBDYQZSFPNL28' }, 
+        android: { sym: '$', val: '9.99', old: '14.99' },
         agency: { sym: '$', val: '49', orig: '$99' } 
     }
 };
@@ -147,10 +149,15 @@ if (toggleBtn) {
         document.getElementById('link-mon').href = p.mon.link;
 
         document.querySelector('.price-val-life').textContent = p.life.val;
-    const oldValEl = document.querySelector('.price-val-life-old');
-    if (oldValEl) oldValEl.textContent = p.life.old;
+        const oldValEl = document.querySelector('.price-val-life-old');
+        if (oldValEl) oldValEl.textContent = p.life.old;
         document.querySelector('.price-orig-life').textContent = p.life.orig;
         document.getElementById('link-life').href = p.life.link;
+
+        const androidValEl = document.querySelector('.price-val-android');
+        if (androidValEl) androidValEl.textContent = p.android.val;
+        const androidOldEl = document.querySelector('.price-old-android');
+        if (androidOldEl) androidOldEl.textContent = p.android.old;
 
         document.querySelector('.price-val-agency').textContent = p.agency.val;
         document.querySelector('.price-orig-agency').textContent = p.agency.orig;
