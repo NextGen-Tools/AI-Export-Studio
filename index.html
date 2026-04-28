@@ -170,17 +170,20 @@
       .cursor-blink { color: #a855f7; font-weight: bold; font-size: 20px; animation: blink 1s infinite; }
 
       @keyframes wandWiggle { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-20deg); } 75% { transform: rotate(20deg); } }
-      @keyframes typeWidth { 0%, 15% { width: 0; } 50%, 85% { width: 220px; } 100% { width: 0; } }
+      @keyframes typeWidth { 0%, 15% { width: 0; } 50%, 85% { width: 180px; } 100% { width: 0; } }
+      @media (min-width: 768px) {
+        @keyframes typeWidth { 0%, 15% { width: 0; } 50%, 85% { width: 220px; } 100% { width: 0; } }
+      }
       @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
     </style>
     <script src="lucide.min.js"></script>
   </head>
   <body class="min-h-screen bg-white text-slate-950 font-sans selection:bg-blue-100 selection:text-blue-700 overflow-x-hidden">
     <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 md:px-12 h-20 flex items-center justify-between bg-transparent">
-      <a href="#" class="flex items-center gap-3 group cursor-pointer hover:bg-slate-50 px-2 py-1 rounded-xl transition-all">
-        <img src="https://aiexportstudio.vercel.app/icon128.png" alt="Ai Export Logo" class="w-10 h-10 object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
-        <span class="text-xl font-black tracking-tighter text-slate-950">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-4 md:px-12 h-16 md:h-20 flex items-center justify-between bg-transparent">
+      <a href="#" class="flex items-center gap-2 md:gap-3 group cursor-pointer hover:bg-slate-50 px-2 py-1 rounded-xl transition-all">
+        <img src="https://aiexportstudio.vercel.app/icon128.png" alt="Ai Export Logo" class="w-8 h-8 md:w-10 md:h-10 object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
+        <span class="text-lg md:text-xl font-black tracking-tighter text-slate-950">
           Ai Export <span class="text-blue-600">Studio</span>
         </span>
       </a>
@@ -208,7 +211,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-40 px-6" style="padding-bottom: 50px;">
+    <section class="relative pt-24 md:pt-40 px-6" style="padding-bottom: 50px;">
       <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-50 rounded-full blur-[120px] -z-10 animate-blob-1"></div>
       <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-50 rounded-full blur-[100px] -z-10 animate-blob-2" style="animation-delay: 1s;"></div>
 
@@ -218,14 +221,14 @@
           Founder's Edition Now Live
         </div>
         
-        <h1 class="reveal-up delay-100 text-6xl md:text-8xl font-black tracking-tight leading-normal mb-8 py-4">
+        <h1 class="reveal-up delay-100 text-4xl sm:text-5xl md:text-8xl font-black tracking-tight leading-tight md:leading-normal mb-6 md:mb-8 py-4">
           Export AI chats <br />
           <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent pb-4">
             beautifully.
           </span>
         </h1>
         
-        <p class="reveal-up delay-200 text-2xl md:text-3xl font-medium text-slate-600 max-w-4xl mx-auto mb-12 leading-snug">
+        <p class="reveal-up delay-200 text-lg md:text-3xl font-medium text-slate-600 max-w-4xl mx-auto mb-10 md:mb-12 leading-relaxed md:leading-snug px-2 md:px-0">
           Save ChatGPT and Gemini conversations to PDF, Word, and Markdown with perfect formatting. No more messy copy-pasting.
         </p>
         
@@ -248,27 +251,27 @@
     <!-- Trust Row -->
     <div class="border-y border-slate-100 bg-slate-50/50" style="padding-top: 45px; padding-bottom: 45px;">
       <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-6 md:gap-10">
-        <div class="reveal-up flex items-center gap-3 bg-white border border-slate-200 shadow-sm px-6 py-3 rounded-full text-slate-700 font-bold text-sm tracking-wide">
-          <i data-lucide="lock" stroke-width="2.5" class="w-5 h-5 text-blue-600"></i> 100% Private & Local
+        <div class="reveal-up flex items-center gap-2 md:gap-3 bg-white border border-slate-200 shadow-sm px-4 md:px-6 py-2 md:py-3 rounded-full text-slate-700 font-bold text-xs md:text-sm tracking-wide">
+          <i data-lucide="lock" stroke-width="2.5" class="w-4 h-4 md:w-5 md:h-5 text-blue-600"></i> 100% Private & Local
         </div>
-        <div class="reveal-up delay-100 flex items-center gap-3 bg-white border border-slate-200 shadow-sm px-6 py-3 rounded-full text-slate-700 font-bold text-sm tracking-wide">
-          <i data-lucide="zap" stroke-width="2.5" class="w-5 h-5 text-blue-600"></i> Instant Export Logic
+        <div class="reveal-up delay-100 flex items-center gap-2 md:gap-3 bg-white border border-slate-200 shadow-sm px-4 md:px-6 py-2 md:py-3 rounded-full text-slate-700 font-bold text-xs md:text-sm tracking-wide">
+          <i data-lucide="zap" stroke-width="2.5" class="w-4 h-4 md:w-5 md:h-5 text-blue-600"></i> Instant Export Logic
         </div>
-        <div class="reveal-up delay-200 flex items-center gap-3 bg-white border border-slate-200 shadow-sm px-6 py-3 rounded-full text-slate-700 font-bold text-sm tracking-wide">
-          <i data-lucide="shield-check" stroke-width="2.5" class="w-5 h-5 text-blue-600"></i> No Data Collection
+        <div class="reveal-up delay-200 flex items-center gap-2 md:gap-3 bg-white border border-slate-200 shadow-sm px-4 md:px-6 py-2 md:py-3 rounded-full text-slate-700 font-bold text-xs md:text-sm tracking-wide">
+          <i data-lucide="shield-check" stroke-width="2.5" class="w-4 h-4 md:w-5 md:h-5 text-blue-600"></i> No Data Collection
         </div>
       </div>
     </div>
 
     <!-- Comparison Section -->
-    <section class="py-32 px-6 max-w-7xl mx-auto" id="features">
-      <div class="reveal-up text-center mb-20">
-        <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6">The end of the copy-paste era.</h2>
+    <section class="py-20 md:py-32 px-4 md:px-6 max-w-7xl mx-auto" id="features">
+      <div class="reveal-up text-center mb-12 md:mb-20">
+        <h2 class="text-3xl md:text-5xl font-black tracking-tight mb-4 md:mb-6">The end of the copy-paste era.</h2>
         <p class="text-lg text-slate-500 max-w-xl mx-auto">A clean, effortless way to preserve your most valuable AI sessions without losing formatting.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="reveal-scale p-10 rounded-[32px] bg-slate-50 border-2 border-dashed border-slate-300 relative overflow-hidden flex flex-col opacity-90 hover:opacity-100 transition-opacity">
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div class="reveal-scale p-6 md:p-10 rounded-[32px] bg-slate-50 border-2 border-dashed border-slate-300 relative overflow-hidden flex flex-col opacity-90 hover:opacity-100 transition-opacity">
           <!-- Subtle diagonal stripes in background -->
           <div class="absolute inset-0 opacity-30" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #e2e8f0 10px, #e2e8f0 20px);"></div>
           
@@ -287,7 +290,7 @@
           </ul>
         </div>
         
-        <div class="reveal-scale delay-100 p-10 rounded-[32px] bg-white border-4 border-blue-600 shadow-[0_30px_70px_-15px_rgba(59,130,246,0.3)] relative overflow-hidden transform md:scale-105 md:-translate-x-4 md:-translate-y-2 z-20 hover:scale-110 transition-transform duration-500">
+        <div class="reveal-scale delay-100 p-6 md:p-10 rounded-[32px] bg-white border-4 border-blue-600 shadow-[0_30px_70px_-15px_rgba(59,130,246,0.3)] relative overflow-hidden transform md:scale-105 md:-translate-x-4 md:-translate-y-2 z-20 hover:scale-110 transition-transform duration-500">
           <div class="absolute -top-32 -right-32 w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
           
           <div class="absolute top-0 right-0 p-5">
@@ -308,60 +311,60 @@
     </section>
 
     <!-- Features Grid -->
-    <section class="py-32 px-6 bg-slate-950 text-white overflow-hidden relative">
+    <section class="py-20 md:py-32 px-4 md:px-6 bg-slate-950 text-white overflow-hidden relative">
       <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
       
       <div class="max-w-7xl mx-auto relative z-10">
-        <div class="reveal-up text-center mb-24">
-          <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-6">Built for absolute clarity.</h2>
-          <p class="text-xl text-slate-400 max-w-2xl mx-auto">We focused strictly on what matters: pristine formatting, privacy, and speed.</p>
+        <div class="reveal-up text-center mb-12 md:mb-24">
+          <h2 class="text-3xl md:text-6xl font-black tracking-tight mb-4 md:mb-6">Built for absolute clarity.</h2>
+          <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto">We focused strictly on what matters: pristine formatting, privacy, and speed.</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="reveal-up p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
+          <div class="reveal-up p-6 md:p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
             <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-blue-500/20 text-blue-400"><i data-lucide="layout" class="w-7 h-7"></i></div>
             <h3 class="text-xl font-bold mb-4">Flawless Fidelity</h3>
             <p class="text-slate-400 leading-relaxed text-sm">LaTeX, tables, and code blocks render exactly as they do in your browser.</p>
           </div>
-          <div class="reveal-up delay-100 p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
+          <div class="reveal-up delay-100 p-6 md:p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
             <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-emerald-500/20 text-emerald-400"><i data-lucide="shield-check" class="w-7 h-7"></i></div>
             <h3 class="text-xl font-bold mb-4">Total Privacy</h3>
             <p class="text-slate-400 leading-relaxed text-sm">Your chats never leave your machine. Everything is processed locally.</p>
           </div>
-          <div class="reveal-up delay-200 p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
+          <div class="reveal-up delay-200 p-6 md:p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
             <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-purple-500/20 text-purple-400"><i data-lucide="layers" class="w-7 h-7"></i></div>
             <h3 class="text-xl font-bold mb-4">Selective Focus</h3>
             <p class="text-slate-400 leading-relaxed text-sm">Cut out the noise. Select only the specific prompts and responses you need.</p>
           </div>
-          <div class="reveal-up delay-300 p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
+          <div class="reveal-up delay-300 p-6 md:p-8 rounded-3xl bg-slate-800/80 border border-slate-600 shadow-lg hover:bg-slate-700 hover:border-slate-500 transition-all hover:-translate-y-2 hover:shadow-xl">
             <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-amber-500/20 text-amber-400"><i data-lucide="zap" class="w-7 h-7"></i></div>
-            <h3 class="text-2xl font-black mb-4">Deep Capture</h3>
-            <p class="text-slate-400 leading-relaxed text-base">Automatically scrolls and captures massive conversations without missing a detail.</p>
+            <h3 class="text-xl md:text-2xl font-black mb-4">Deep Capture</h3>
+            <p class="text-slate-400 leading-relaxed text-sm md:text-base">Automatically scrolls and captures massive conversations without missing a detail.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Bento Grid: See it in Action -->
-    <section class="bento-section py-24 md:py-32 px-6">
+    <section class="bento-section py-16 md:py-32 px-4 md:px-6 overflow-hidden">
       <div class="bento-bg-glow bento-bg-glow-1"></div>
       <div class="bento-bg-glow bento-bg-glow-2"></div>
 
       <div class="max-w-7xl mx-auto relative z-10">
-        <div class="reveal-up text-center mb-16 relative">
-          <h2 class="text-4xl md:text-5xl font-black mb-4 text-white" style="background: linear-gradient(135deg, #a855f7, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">See it in action</h2>
-          <p class="text-xl text-slate-400">Smart features with 4 clean interactive cards.</p>
+        <div class="reveal-up text-center mb-12 md:mb-16 relative">
+          <h2 class="text-3xl md:text-5xl font-black mb-4 text-white" style="background: linear-gradient(135deg, #a855f7, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">See it in action</h2>
+          <p class="text-lg md:text-xl text-slate-400">Smart features with 4 clean interactive cards.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[360px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[360px]">
 
           <!-- 1. Flawless Formatting -->
           <div class="md:col-span-2 bento-card group">
-            <div class="p-8 pb-0 z-10">
-              <h3 class="text-2xl font-bold text-white mb-2">Flawless Formatting</h3>
-              <p class="text-slate-400">Code syntax, images, and tables perfectly preserved.</p>
+            <div class="p-6 md:p-8 pb-0 z-10">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Flawless Formatting</h3>
+              <p class="text-slate-400 text-sm md:text-base">Code syntax, images, and tables perfectly preserved.</p>
             </div>
-            <div class="flex-1 mt-6 mx-6 mb-6 anim-container flex-row gap-4 p-5 items-stretch bg-slate-900/50">
+            <div class="flex-1 mt-6 mx-4 md:mx-6 mb-6 anim-container flex-col sm:flex-row gap-4 p-4 md:p-5 items-stretch bg-slate-900/50 overflow-x-hidden">
               <!-- Code Block -->
               <div class="flex-1 bg-[#0f172a] rounded-xl border border-slate-700 overflow-hidden shadow-xl flex flex-col float-item">
                 <div class="bg-slate-800 px-3 py-2 flex gap-1.5 border-b border-slate-700">
@@ -376,8 +379,8 @@
                   <div>};</div>
                 </div>
               </div>
-              <!-- Image -->
-              <div class="flex-1 rounded-xl border border-slate-700 overflow-hidden shadow-xl relative group/img float-item">
+              <!-- Image (Hidden on small mobile to save space) -->
+              <div class="hidden sm:flex flex-1 rounded-xl border border-slate-700 overflow-hidden shadow-xl relative group/img float-item">
                 <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&h=300&q=80" class="w-full h-full object-cover opacity-80 group-hover/img:opacity-100 transition duration-500" alt="Theme Image">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent flex items-end p-3">
                   <span class="text-sm font-semibold text-white flex items-center gap-2"><i data-lucide="image" class="w-4 h-4 text-brand-400"></i> chart.png</span>
@@ -403,11 +406,11 @@
 
           <!-- 2. 1-Click Export -->
           <div class="bento-card group">
-            <div class="p-8 pb-0 z-10">
-              <h3 class="text-2xl font-bold text-white mb-2">1-Click Export</h3>
-              <p class="text-slate-400">Instantly save any conversation as a beautiful PDF or Word document.</p>
+            <div class="p-6 md:p-8 pb-0 z-10">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-2">1-Click Export</h3>
+              <p class="text-slate-400 text-sm md:text-base">Instantly save any conversation as a beautiful PDF or Word document.</p>
             </div>
-            <div class="flex-1 mt-6 mx-8 mb-8 anim-container">
+            <div class="flex-1 mt-6 mx-6 md:mx-8 mb-6 md:mb-8 min-h-[180px] anim-container">
               <div class="export-doc pdf">PDF</div>
               <div class="export-doc word">DOCX</div>
               <div class="export-btn">
@@ -418,11 +421,11 @@
 
           <!-- 3. Selective Export -->
           <div class="bento-card group">
-            <div class="p-8 pb-0 z-10">
-              <h3 class="text-2xl font-bold text-white mb-2">Selective Export</h3>
-              <p class="text-slate-400">Pick exactly which messages to save.</p>
+            <div class="p-6 md:p-8 pb-0 z-10">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Selective Export</h3>
+              <p class="text-slate-400 text-sm md:text-base">Pick exactly which messages to save.</p>
             </div>
-            <div class="flex-1 mt-6 mx-6 mb-6 anim-container select-anim">
+            <div class="flex-1 mt-6 mx-4 md:mx-6 mb-6 min-h-[220px] anim-container select-anim">
               <div class="chat-bubble left"><div class="checkbox"></div>Hello!</div>
               <div class="chat-bubble right">Hi there!</div>
               <div class="chat-bubble left"><div class="checkbox"></div>Export this?</div>
@@ -431,11 +434,11 @@
 
           <!-- 4. Magic Auto-Prompt -->
           <div class="md:col-span-2 bento-card group">
-            <div class="p-8 pb-0 z-10">
-              <h3 class="text-2xl font-bold text-white mb-2">Magic Auto-Prompt</h3>
-              <p class="text-slate-400">Save your favorite prompts and inject them instantly without typing.</p>
+            <div class="p-6 md:p-8 pb-0 z-10">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Magic Auto-Prompt</h3>
+              <p class="text-slate-400 text-sm md:text-base">Save your favorite prompts and inject them instantly without typing.</p>
             </div>
-            <div class="flex-1 mt-6 mx-8 mb-8 anim-container">
+            <div class="flex-1 mt-6 mx-4 md:mx-8 mb-6 md:mb-8 min-h-[140px] anim-container">
               <div class="prompt-box">
                 <span class="magic-wand">✨</span>
                 <div style="display: flex; align-items: center;">
@@ -450,13 +453,13 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pt-40 pb-40 px-6 bg-slate-50">
+    <section id="pricing" class="pt-20 md:pt-40 pb-20 md:pb-40 px-4 md:px-6 bg-slate-50 overflow-hidden">
       <div class="max-w-7xl mx-auto">
-        <div class="reveal-up text-center mb-16">
-          <div class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-xs md:text-sm font-black uppercase tracking-widest mb-10 shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)]">
-            🍕 LIMITED TIME: LIFETIME ACCESS FOR < 2 PIZZAS
+        <div class="reveal-up text-center mb-12 md:mb-16">
+          <div class="inline-block bg-blue-600 text-white px-4 md:px-8 py-2 md:py-3 rounded-full text-[10px] sm:text-xs md:text-sm font-black uppercase tracking-widest mb-6 md:mb-10 shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)] max-w-full">
+            <span class="whitespace-normal sm:whitespace-nowrap">🍕 LIMITED TIME: LIFETIME ACCESS FOR < 2 PIZZAS</span>
           </div>
-          <h2 class="text-5xl md:text-7xl font-black tracking-tight mb-10 text-slate-900">
+          <h2 class="text-4xl md:text-7xl font-black tracking-tight mb-8 md:mb-10 text-slate-900">
             Choose your plan.
           </h2>
           
@@ -474,30 +477,30 @@
 
         <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto overflow-visible pt-8">
           <!-- Pro Monthly -->
-          <div class="reveal-up p-10 rounded-[40px] bg-white border border-slate-200 flex flex-col hover:shadow-xl hover:shadow-slate-200/50 transition-shadow">
+          <div class="reveal-up p-6 md:p-10 rounded-[32px] md:rounded-[40px] bg-white border border-slate-200 flex flex-col hover:shadow-xl hover:shadow-slate-200/50 transition-shadow">
             <div class="mb-8">
               <h3 class="text-sm font-black uppercase tracking-widest text-slate-400 mb-4">Pro Monthly</h3>
               <div class="flex items-baseline gap-1">
                 <span class="text-2xl font-bold text-slate-900 price-sym">₹</span>
-                <span class="text-6xl font-black text-slate-900 tracking-tighter price-val-mon">149</span>
+                <span class="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter price-val-mon">149</span>
                 <span class="text-slate-400 font-bold">/mo</span>
               </div>
               <div class="text-xl text-slate-400 line-through font-bold mt-1 price-orig-mon">₹299</div>
             </div>
             <ul class="space-y-4 mb-10 flex-grow">
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-700"><i data-lucide="check-circle" class="w-5 h-5 text-blue-500"></i> Everything in Free</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-700"><i data-lucide="crop" class="w-5 h-5 text-blue-500"></i> Unlimited Selective Export</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-700"><i data-lucide="zap" class="w-5 h-5 text-blue-500"></i> Unlimited Auto Prompts</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-700"><i data-lucide="palette" class="w-5 h-5 text-blue-500"></i> Premium Fonts & Styles</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-700"><i data-lucide="shield-check" class="w-5 h-5 text-blue-500"></i> No Watermarks</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-700"><i data-lucide="layers" class="w-5 h-5 text-blue-500"></i> Unlock 6 Formats (PDF, Word, MD, etc.)</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-700"><i data-lucide="monitor" class="w-5 h-5 text-blue-500"></i> Support for up to 3 Devices</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-700"><i data-lucide="check-circle" class="w-5 h-5 text-blue-500 flex-shrink-0"></i> Everything in Free</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-700"><i data-lucide="crop" class="w-5 h-5 text-blue-500 flex-shrink-0"></i> Unlimited Selective Export</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-700"><i data-lucide="zap" class="w-5 h-5 text-blue-500 flex-shrink-0"></i> Unlimited Auto Prompts</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-700"><i data-lucide="palette" class="w-5 h-5 text-blue-500 flex-shrink-0"></i> Premium Fonts & Styles</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-700"><i data-lucide="shield-check" class="w-5 h-5 text-blue-500 flex-shrink-0"></i> No Watermarks</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-700"><i data-lucide="layers" class="w-5 h-5 text-blue-500 flex-shrink-0"></i> Unlock 6 Formats</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-700"><i data-lucide="monitor-smartphone" class="w-5 h-5 text-blue-500 flex-shrink-0"></i> PC + Mobile Access (3 Devices)</li>
             </ul>
-            <a id="link-mon" href="https://rzp.io/rzp/aiexportstudio-monthly" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-2xl bg-slate-50 text-slate-950 font-bold text-[17px] text-center hover:bg-slate-100 transition-colors border border-slate-200">Subscribe Monthly</a>
+            <a id="link-mon" href="https://rzp.io/rzp/aiexportstudio-monthly" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-2xl bg-slate-50 text-slate-950 font-bold text-base md:text-[17px] text-center hover:bg-slate-100 transition-colors border border-slate-200">Subscribe Monthly</a>
           </div>
 
           <!-- Pro Lifetime -->
-          <div class="reveal-up delay-100 p-10 rounded-[40px] bg-white border-4 border-slate-950 flex flex-col relative shadow-2xl shadow-slate-200 md:scale-105 z-10 transition-transform hover:shadow-slate-300/50">
+          <div class="reveal-up delay-100 p-6 md:p-10 rounded-[32px] md:rounded-[40px] bg-white border-4 border-slate-950 flex flex-col relative shadow-2xl shadow-slate-200 md:scale-105 z-10 transition-transform hover:shadow-slate-300/50">
             <!-- Best Value Tag: sits centered on the card top border -->
             <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-slate-950 text-white px-6 py-2 rounded-full text-[11px] font-black uppercase tracking-widest z-50 shadow-lg whitespace-nowrap">
               Best Value
@@ -505,43 +508,44 @@
             
             <div class="mb-8">
               <h3 class="text-sm font-black uppercase tracking-widest text-blue-600 mb-4">Pro Lifetime</h3>
-              <div class="flex items-baseline gap-4">
-                <div class="relative inline-block text-4xl font-black text-slate-900">
+              <div class="flex flex-col sm:flex-row items-start sm:items-baseline gap-2 sm:gap-4">
+                <div class="relative inline-block text-3xl md:text-4xl font-black text-slate-900">
                   <span class="price-sym">₹</span><span class="price-val-life-old">499</span>
                   <span class="absolute left-0 w-full shadow-sm" style="top: 50%; height: 3px; background-color: #ef4444; transform: translateY(-50%) rotate(-12deg) scale(1.1); border-radius: 9999px;"></span>
                 </div>
                 <div class="flex items-baseline gap-1">
-                  <span class="text-2xl font-bold price-sym" style="color: #f59e0b; text-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);">₹</span>
-                  <span class="text-6xl font-black tracking-tighter price-val-life" style="color: #f59e0b; text-shadow: 0 2px 12px rgba(245, 158, 11, 0.3);">299</span>
-                  <span class="text-slate-400 font-bold">once</span>
+                  <span class="text-xl md:text-2xl font-bold price-sym" style="color: #f59e0b; text-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);">₹</span>
+                  <span class="text-5xl md:text-6xl font-black tracking-tighter price-val-life" style="color: #f59e0b; text-shadow: 0 2px 12px rgba(245, 158, 11, 0.3);">299</span>
+                  <span class="text-slate-400 font-bold text-sm md:text-base">once</span>
                 </div>
               </div>
-              <div class="mt-8 flex flex-col items-center gap-2 mb-8 relative z-10">
-                <div class="bg-red-500/10 border border-red-500/20 text-red-700 px-4 py-1.5 rounded-xl font-black text-sm flex items-center gap-2 animate-pulse shadow-sm">
-                  <i data-lucide="zap" class="w-4 h-4 fill-red-600 text-red-600"></i>
+              <div class="mt-6 md:mt-8 flex flex-col items-start md:items-center gap-2 mb-6 md:mb-8 relative z-10">
+                <div class="bg-red-500/10 border border-red-500/20 text-red-700 px-3 md:px-4 py-1.5 rounded-xl font-black text-xs md:text-sm flex items-center gap-2 animate-pulse shadow-sm w-full md:w-auto text-left md:text-center">
+                  <i data-lucide="zap" class="w-4 h-4 fill-red-600 text-red-600 flex-shrink-0"></i>
                   <span>EARLY BIRD: First 100 Users Only!</span>
                 </div>
-                <div class="bg-amber-500/10 border border-amber-500/20 text-amber-700 px-4 py-1.5 rounded-xl font-bold text-sm flex items-center gap-2">
-                  <i data-lucide="flame" class="w-4 h-4 fill-amber-600 text-amber-600"></i>
+                <div class="bg-amber-500/10 border border-amber-500/20 text-amber-700 px-3 md:px-4 py-1.5 rounded-xl font-bold text-xs md:text-sm flex items-center gap-2 w-full md:w-auto text-left md:text-center">
+                  <i data-lucide="flame" class="w-4 h-4 fill-amber-600 text-amber-600 flex-shrink-0"></i>
                   <span id="coupon-discount">Just the price of 1 pizza 🍕</span>
                 </div>
               </div>
               <div class="text-xl text-slate-400 line-through font-bold mt-1 price-orig-life">₹999</div>
             </div>
             <ul class="space-y-4 mb-6 flex-grow">
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-900"><i data-lucide="sparkles" class="w-5 h-5 text-blue-600"></i> Everything in Pro Monthly</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-900"><i data-lucide="credit-card" class="w-5 h-5 text-blue-600"></i> Pay Once, Own Forever</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-900"><i data-lucide="infinity" class="w-5 h-5 text-blue-600"></i> Lifetime Feature Updates</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-900"><i data-lucide="rocket" class="w-5 h-5 text-blue-600"></i> Early Access to New Features</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-900"><i data-lucide="headphones" class="w-5 h-5 text-blue-600"></i> VIP Support Access</li>
-              <li class="flex items-center gap-3 text-[17px] font-bold text-slate-500 italic"><i data-lucide="plus-circle" class="w-5 h-5 text-slate-400"></i> And much more coming soon...</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-900"><i data-lucide="sparkles" class="w-5 h-5 text-blue-600 flex-shrink-0"></i> Everything in Pro Monthly</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-blue-800 bg-blue-50 border border-blue-100 p-2 -mx-2 rounded-xl shadow-sm"><i data-lucide="monitor-smartphone" class="w-5 h-5 text-blue-600 flex-shrink-0"></i> PC + Mobile Access (3 Devices)</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-900"><i data-lucide="credit-card" class="w-5 h-5 text-blue-600 flex-shrink-0"></i> Pay Once, Own Forever</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-900"><i data-lucide="infinity" class="w-5 h-5 text-blue-600 flex-shrink-0"></i> Lifetime Feature Updates</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-900"><i data-lucide="rocket" class="w-5 h-5 text-blue-600 flex-shrink-0"></i> Early Access to New Features</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-900"><i data-lucide="headphones" class="w-5 h-5 text-blue-600 flex-shrink-0"></i> VIP Support Access</li>
+              <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-500 italic"><i data-lucide="plus-circle" class="w-5 h-5 text-slate-400 flex-shrink-0"></i> And much more coming soon...</li>
             </ul>
 
-            <a id="link-life" href="https://rzp.io/rzp/aiexportstudio-lifetime" target="_blank" rel="noopener noreferrer" class="w-full py-5 rounded-2xl bg-slate-950 text-white font-bold text-[17px] text-center hover:bg-slate-800 transition-all shadow-xl shadow-slate-300">Get Lifetime Deal</a>
+            <a id="link-life" href="https://rzp.io/rzp/aiexportstudio-lifetime" target="_blank" rel="noopener noreferrer" class="w-full py-4 md:py-5 rounded-2xl bg-slate-950 text-white font-bold text-base md:text-[17px] text-center hover:bg-slate-800 transition-all shadow-xl shadow-slate-300">Get Lifetime Deal</a>
           </div>
 
           <!-- Agency Lifetime -->
-          <div class="reveal-up p-10 rounded-[40px] bg-white border border-slate-200 flex flex-col relative hover:shadow-xl hover:shadow-slate-200/50 transition-shadow">
+          <div class="reveal-up p-6 md:p-10 rounded-[32px] md:rounded-[40px] bg-white border border-slate-200 flex flex-col relative hover:shadow-xl hover:shadow-slate-200/50 transition-shadow">
             <div class="absolute w-max -top-5 left-1/2 -translate-x-1/2 bg-purple-200 text-purple-900 px-6 py-2 rounded-full text-[11px] font-black uppercase tracking-widest z-50 shadow-lg whitespace-nowrap">
               Coming&nbsp;Soon
             </div>
@@ -593,10 +597,10 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-32 px-6 max-w-4xl mx-auto">
-      <div class="reveal-up text-center mb-20">
-        <h2 class="text-5xl md:text-6xl font-black tracking-tight mb-4">Common Questions.</h2>
-        <p class="text-lg text-slate-500">Everything you need to know about Ai Export Studio.</p>
+    <section class="py-20 md:py-32 px-4 md:px-6 max-w-4xl mx-auto">
+      <div class="reveal-up text-center mb-12 md:mb-20">
+        <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-4">Common Questions.</h2>
+        <p class="text-base md:text-lg text-slate-500">Everything you need to know about Ai Export Studio.</p>
       </div>
 
       <div class="space-y-3">
@@ -660,30 +664,30 @@
 
 
     <!-- Footer -->
-    <footer class="py-20 px-6 border-t border-slate-100">
+    <footer class="py-12 md:py-20 px-4 md:px-6 border-t border-slate-100">
       <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-10 mb-20">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-10 mb-12 md:mb-20">
           <div class="flex items-center gap-3 group">
-            <img src="https://aiexportstudio.vercel.app/icon128.png" alt="Ai Export Logo" class="w-10 h-10 object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
-            <span class="text-xl font-black tracking-tighter text-slate-950">
+            <img src="https://aiexportstudio.vercel.app/icon128.png" alt="Ai Export Logo" class="w-8 h-8 md:w-10 md:h-10 object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
+            <span class="text-lg md:text-xl font-black tracking-tighter text-slate-950">
               Ai Export <span class="text-blue-600">Studio</span>
             </span>
           </div>
           
-          <div class="flex flex-wrap justify-center gap-12">
-            <a href="https://ko-fi.com/aiexportstudio" target="_blank" class="text-base font-bold text-slate-500 hover:text-slate-950 transition-colors">Support (Global)</a>
-            <a href="https://razorpay.me/@aiexportstudio" target="_blank" rel="noopener noreferrer" class="text-base font-bold text-slate-500 hover:text-slate-950 transition-colors">Support (India)</a>
-            <a href="privacy.html" class="text-base font-bold text-slate-500 hover:text-slate-950 transition-colors">Privacy Policy</a>
-            <a href="https://chromewebstore.google.com/detail/ai-export-studio-chatgpt-gemini/aodfihebjndlllpkfcdhgjcfmaiaiapb/reviews" target="_blank" class="text-base font-bold text-slate-500 hover:text-yellow-500 transition-colors flex items-center gap-1.5 group">
+          <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8 md:gap-12">
+            <a href="https://ko-fi.com/aiexportstudio" target="_blank" class="text-sm md:text-base font-bold text-slate-500 hover:text-slate-950 transition-colors">Support (Global)</a>
+            <a href="https://razorpay.me/@aiexportstudio" target="_blank" rel="noopener noreferrer" class="text-sm md:text-base font-bold text-slate-500 hover:text-slate-950 transition-colors">Support (India)</a>
+            <a href="privacy.html" class="text-sm md:text-base font-bold text-slate-500 hover:text-slate-950 transition-colors">Privacy Policy</a>
+            <a href="https://chromewebstore.google.com/detail/ai-export-studio-chatgpt-gemini/aodfihebjndlllpkfcdhgjcfmaiaiapb/reviews" target="_blank" class="text-sm md:text-base font-bold text-slate-500 hover:text-yellow-500 transition-colors flex items-center gap-1.5 group">
               <i data-lucide="star" class="w-4 h-4 group-hover:fill-yellow-500 transition-colors"></i> Rate Us
             </a>
           </div>
         </div>
         
         <div class="text-center">
-          <p class="text-slate-500 text-base font-bold mb-2">© 2026 Ai Export Studio. Built with ❤️ for AI users.</p>
-          <p class="text-slate-400 text-sm font-bold">
-            Support: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hello.aiexportstudio@gmail.com&su=Support%20Request%20-%20Ai%20Export%20Studio" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">hello.aiexportstudio@gmail.com</a>
+          <p class="text-slate-500 text-sm md:text-base font-bold mb-2">© 2026 Ai Export Studio. Built with ❤️ for AI users.</p>
+          <p class="text-slate-400 text-xs md:text-sm font-bold">
+            Support: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hello.aiexportstudio@gmail.com&su=Support%20Request%20-%20Ai%20Export%20Studio" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline break-all">hello.aiexportstudio@gmail.com</a>
           </p>
         </div>
       </div>
