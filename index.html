@@ -541,23 +541,26 @@
               <li class="flex items-center gap-3 text-base md:text-[17px] font-bold text-slate-500 italic"><i data-lucide="plus-circle" class="w-5 h-5 text-slate-400 flex-shrink-0"></i> And much more coming soon...</li>
             </ul>
 
-            <div class="mt-auto space-y-3">
-              <!-- Android Only (Visible ONLY on Mobile) -->
-              <div class="md:hidden border-2 border-emerald-100 bg-emerald-50/50 rounded-2xl p-1 mb-2">
-                <a id="link-life-android" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-white text-emerald-700 font-bold text-base text-center hover:bg-emerald-50 transition-all border border-emerald-200 flex flex-col items-center justify-center leading-tight shadow-sm">
-                  <span class="flex items-center gap-2"><i data-lucide="smartphone" class="w-4 h-4"></i> Android Only</span>
-                  <div class="flex items-center gap-2 mt-1">
-                    <span class="text-lg font-black text-emerald-600">₹199</span>
-                    <span class="text-xs text-slate-400 line-through">₹299</span>
-                  </div>
-                </a>
-              </div>
-
+            <div class="mt-auto space-y-3 flex flex-col">
               <!-- All Access (Visible on both) -->
-              <a id="link-life" href="https://rzp.io/rzp/aiexportstudio-lifetime" target="_blank" rel="noopener noreferrer" class="w-full py-4 md:py-5 rounded-2xl bg-slate-950 text-white font-bold text-base md:text-[17px] text-center hover:bg-slate-800 transition-all shadow-xl shadow-slate-300 flex flex-col items-center justify-center relative">
+              <a id="link-life" href="https://rzp.io/rzp/aiexportstudio-lifetime" target="_blank" rel="noopener noreferrer" class="w-full py-4 md:py-5 rounded-2xl bg-slate-950 text-white font-bold text-base md:text-[17px] text-center hover:bg-slate-800 transition-all shadow-xl shadow-slate-300 flex flex-col items-center justify-center relative order-1">
                 <span class="md:hidden text-[10px] uppercase tracking-widest text-amber-400 font-black mb-1">Best Value</span>
                 <span class="flex items-center gap-2"><i data-lucide="monitor-smartphone" class="w-4 h-4 md:hidden"></i> Get All Access <span class="md:hidden">(₹299)</span></span>
               </a>
+
+              <!-- Android Only (Visible ONLY on Mobile) -->
+              <div class="md:hidden border-2 border-emerald-100 bg-emerald-50/50 rounded-2xl p-1 order-2 mt-2">
+                <a id="link-life-android" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-white text-emerald-700 font-bold text-base text-center hover:bg-emerald-50 transition-all border border-emerald-200 flex flex-col items-center justify-center leading-tight shadow-sm relative overflow-hidden">
+                  <span class="flex items-center gap-2"><i data-lucide="smartphone" class="w-4 h-4"></i> Android Only</span>
+                  <div class="flex items-center gap-2 mt-1">
+                    <span class="text-xl font-black text-emerald-600">₹199</span>
+                    <span class="text-xs text-slate-400 line-through">₹299</span>
+                  </div>
+                  <div class="text-[11px] font-bold text-emerald-800/70 mt-1.5 uppercase tracking-wide bg-emerald-100 px-2 py-0.5 rounded-full">
+                    1 Android Device Only
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
 
