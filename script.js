@@ -39,13 +39,13 @@ const prices = {
         mon: { sym: '₹', val: '149', orig: '₹299', link: 'https://rzp.io/rzp/aiexportstudio-monthly' }, 
         life: { sym: '₹', val: '299', old: '499', orig: '₹999', link: 'https://rzp.io/rzp/aiexportstudio-lifetime' }, 
         android: { sym: '₹', val: '199', old: '299' },
-        agency: { sym: '₹', val: '1499', orig: '₹2999' } 
+        elite: { sym: '₹', val: '1499', orig: '₹2999' } 
     },
     usd: { 
         mon: { sym: '$', val: '4.99', orig: '$9.99', link: 'https://www.paypal.com/ncp/payment/87C9X6ZQEZK34' }, 
         life: { sym: '$', val: '12.99', old: '19.99', orig: '$49.99', link: 'https://www.paypal.com/ncp/payment/QBDYQZSFPNL28' }, 
         android: { sym: '$', val: '9.99', old: '14.99' },
-        agency: { sym: '$', val: '49', orig: '$99' } 
+        elite: { sym: '$', val: '49', orig: '$99' } 
     }
 };
 
@@ -83,7 +83,7 @@ if (submitBtn) {
             // Fire and forget (don't await) so UI doesn't freeze
             fetch(APPS_SCRIPT_URL + '?action=waitlist', {
                 method: 'POST',
-                body: JSON.stringify({ email: email, plan: 'Agency Lifetime', source: 'Landing Page' }),
+                body: JSON.stringify({ email: email, plan: 'Elite Lifetime', source: 'Landing Page' }),
                 headers: { 'Content-Type': 'text/plain' }
             }).catch(e => console.error('Waitlist storage failed:', e));
 
@@ -159,7 +159,9 @@ if (toggleBtn) {
         const androidOldEl = document.querySelector('.price-old-android');
         if (androidOldEl) androidOldEl.textContent = p.android.old;
 
-        document.querySelector('.price-val-agency').textContent = p.agency.val;
-        document.querySelector('.price-orig-agency').textContent = p.agency.orig;
+        const eliteValEl = document.querySelector('.price-val-elite');
+        if (eliteValEl) eliteValEl.textContent = p.elite.val;
+        const eliteOrigEl = document.querySelector('.price-orig-elite');
+        if (eliteOrigEl) eliteOrigEl.textContent = p.elite.orig;
     });
 }
